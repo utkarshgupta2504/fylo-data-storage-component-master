@@ -1,0 +1,155 @@
+html {
+
+    min-height: 100%;
+    height: 100%;
+}
+
+body {
+
+    min-height: 100%;
+    height: 100%;
+    background-image: url('images/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    background-color: hsl(229, 57%, 11%);
+
+}
+
+#main {
+
+    width: 66%;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    /* left: 50%; */
+    transform: translateY(-50%);
+}
+
+.fylo-main{
+    padding: 5%;
+    line-height: 2;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 15px;
+    border-top-right-radius: 100px;
+}
+
+.icon-container {
+
+    display: inline-block;
+    margin: 20px 1%;
+    border-radius: 8px;
+    padding: 4% 6%;
+    background-color: hsl(229, 57%, 11%);
+}
+
+.data-stats {
+
+    background-color: transparent;
+    height: 30%;
+}
+
+.data-left {
+
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    padding: 3%;
+    background-color: white;
+    text-align: center;
+    display: inline-block;
+    width: 40%;
+    position: absolute;
+    right: 10%;
+}
+
+.data-left:after {
+
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -29px;
+    border-left: 30px solid transparent;
+    border-top: 30px solid #fff;
+}
+
+.data-left p {
+
+    color: hsl(243, 100%, 93%);
+    font-size: 1rem;
+}
+
+.data-left p strong {
+
+    font-size: 1.5rem;
+}
+
+.data-used {
+
+    margin-left: 20px;
+    border-radius: 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    background-color: hsl(228, 56%, 26%);
+    color: #fff;
+    padding: 8% 5%;
+}
+
+.meter {
+	height: 20px;  /* Can be anything */
+	position: relative;
+	background: #555;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.meter > span {
+  display: block;
+  height: 20px;
+  width: 81.5%;
+  border-radius: 20px;
+}
+
+.orange > span {
+  background-color: hsl(6, 100%, 80%);
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.dot {
+
+    background-color: #fff;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    float: right;
+    margin: 2.5px;
+}
+
+@media screen and (max-width: 992px) {
+
+    body {
+
+        background-image: url(./images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    .data-left:after {
+        content:none;
+    }
+
+    .data-left {
+
+        border-radius: 20px;
+        top: 115%;
+        right: 25%;
+    }
+
+    .data-used {
+
+        padding: 8% 5% 12%;
+        margin-left: 0;
+    }
+}
